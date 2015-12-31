@@ -7,7 +7,6 @@ my $sleep = 0.25;
 my $server = $ARGV[0] || '64.202.97.1';
 my $fqdn = $ARGV[1] || 'servercentral.com';
 
-use Time::Piece;
 use Time::HiRes;
 use POSIX qw/strftime/;
 
@@ -17,7 +16,6 @@ my $ok = 0;
 my $last_sigint = 0;
 
 $SIG{INT} = sub {
-  my $ts = time();
   if (time - $last_sigint < 2) {
     say "\nExiting... $server $ok OK, $err FAIL";
     exit 0;
