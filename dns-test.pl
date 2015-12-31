@@ -4,8 +4,6 @@ use v5.10;
 $| =0;
 
 my $sleep = 0.25;
-my $query = 'app.goclio.com';
-
 my $server = $ARGV[0] || '64.202.97.1';
 my $fqdn = $ARGV[1] || 'servercentral.com';
 
