@@ -12,7 +12,6 @@ use POSIX qw/strftime/;
 
 my $err = 0;
 my $ok = 0;
-
 my $last_sigint = 0;
 
 $SIG{INT} = sub {
